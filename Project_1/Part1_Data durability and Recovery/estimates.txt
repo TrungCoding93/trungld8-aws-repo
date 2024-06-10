@@ -1,0 +1,19 @@
+1.Minimum RTO for a single AZ outage
+So in case RTO for a single AZ outage, RDS will switch to replica in another AZ so when I reboot the Primary DB, it takes about 2 minutes for Primary DB reset again.
+
+2.Minimum RTO for a single region outage
+I reboot the Primary DB at 23:14, it takes about 2 minutes for Primary DB reset again.
+So in case RTO for a single region outage, if we receive notification and have action immediately, it would take approximately 2-3 minutes to reactive our system.
+However, if the problem at the midnight, the recovery time would depend on the current status of the developers, and it would take at least 45 to 60 minutes to recover the system.
+
+3.Minimum RPO for a single AZ outage
+When I restore to point in time, it takes about 
+At June 10, 2024, 00:15:00 (UTC+7:00) I can restore the latest restorable time is
+June 10, 2024, 00:10:00 (UTC+7:00)
+=> Minimum RPO in my case is 5 minutes.
+
+4.Minimum RPO for a single region outage
+When I restore to point in time, it takes about 
+At June 10, 2024, 00:15:00 (UTC+7:00) I can restore the latest restorable time is
+June 10, 2024, 00:10:00 (UTC+7:00)
+=> Minimum RPO in my case is 5 minutes.

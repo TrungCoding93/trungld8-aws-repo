@@ -1,0 +1,73 @@
+Last login: Sun Jun  9 17:33:29 2024 from ec2-18-237-140-164.us-west-2.compute.amazonaws.com
+   ,     #_
+   ~\_  ####_        Amazon Linux 2
+  ~~  \_#####\
+  ~~     \###|       AL2 End of Life is 2025-06-30.
+  ~~       \#/ ___
+   ~~       V~' '->
+    ~~~         /    A newer version of Amazon Linux is available!
+      ~~._.   _/
+         _/ _/       Amazon Linux 2023, GA and supported until 2028-03-15.
+       _/m/'           https://aws.amazon.com/linux/amazon-linux-2023/
+
+[ec2-user@ip-10-2-11-97 ~]$ mysql -h udacity-readreplica.chqqwysy9gdy.us-west-2.rds.amazonaws.com -P 3306 -u admin -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 93
+Server version: 8.0.35 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> SHOW Databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| udacity            |
++--------------------+
+5 rows in set (0.00 sec)
+
+MySQL [(none)]> USE udacity;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [udacity]> SHOW tables;
++-------------------+
+| Tables_in_udacity |
++-------------------+
+| employees         |
++-------------------+
+1 row in set (0.00 sec)
+
+MySQL [udacity]> SELECT * FROM employees;
+ERROR 2006 (HY000): MySQL server has gone away
+No connection. Trying to reconnect...
+Connection id:    7
+Current database: udacity
+
++------+------------+-----------+------+
+| id   | first_name | last_name | age  |
++------+------------+-----------+------+
+|    1 | LY         | TRUNG     |   32 |
++------+------------+-----------+------+
+1 row in set (0.02 sec)
+
+MySQL [udacity]> INSERT INTO employees (id, first_name ,last_name, age) VALUES (2, "NGUYEN", "NAM", 34);
+Query OK, 1 row affected (0.00 sec)
+
+MySQL [udacity]> SELECT * FROM employees;
++------+------------+-----------+------+
+| id   | first_name | last_name | age  |
++------+------------+-----------+------+
+|    1 | LY         | TRUNG     |   32 |
+|    2 | NGUYEN     | NAM       |   34 |
++------+------------+-----------+------+
+2 rows in set (0.00 sec)
+
+MySQL [udacity]> 
