@@ -1,0 +1,20 @@
+﻿Estimate summary
+Upfront cost,Monthly cost,Total 12 months cost,Currency
+0,5648.62,67783.44,USD
+,,* Includes upfront cost
+
+
+Detailed Estimate
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Status,Configuration summary
+Reduced_Cost_Estimate,US East (N. Virginia),,Amazon EC2 ,0,529.182,6350.18,USD,,"Tenancy (Shared Instances), Operating system (Linux), Workload (Consistent, Number of instances: 6), Advance EC2 instance (t4g.xlarge), Pricing strategy ( 1yr  No Upfront), Enable monitoring (enabled), DT Inbound: Not selected (0 TB per month), DT Outbound: Internet (1 TB per month), DT Intra-Region: (0 TB per month)"
+Reduced_Cost_Estimate,US East (N. Virginia),,Network Address Translation (NAT) Gateway,0,78.93,947.16,USD,,Number of NAT Gateways (1)
+Reduced_Cost_Estimate,US East (N. Virginia),,Amazon RDS for PostgreSQL,0,1759.7199999999998,21116.64,USD,,"Storage amount (1 TB), Storage volume (General Purpose SSD (gp2)), Nodes (2), Instance Type (db.m4.xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment Option (Multi-AZ), Pricing Model (OnDemand), Cost for one month of retention (per vCPU per month) (1.5000000000), Cost for each additional month of retention (per vCPU per month) (0.0631000000), Cost for total retention (per vCPU per month) (2.19), Additional backup storage (1 TB), Total Size of Backup Processed for Export (GB) (2048 per month)"
+Reduced_Cost_Estimate,US East (N. Virginia),,S3 Standard,0,1505.56,18066.72,USD,,"S3 Standard storage (5 TB per month), PUT, COPY, POST, LIST requests to S3 Standard (1000000), GET, SELECT, and all other requests from S3 Standard (1000000), Data returned by S3 Select (500 TB per month), Data scanned by S3 Select (500 TB per month)"
+Reduced_Cost_Estimate,US East (N. Virginia),,Data Transfer,0,460.8,5529.60,USD,,"DT Inbound: Not selected (0 TB per month), DT Outbound: Internet (5 TB per month)"
+Reduced_Cost_Estimate,US East (N. Virginia),,Application Load Balancer,0,600.43,7205.16,USD,,Number of Application Load Balancers (1)
+Reduced_Cost_Estimate,US East (N. Virginia),,Amazon CloudFront,0,714,8568.00,USD,,"Data transfer out to internet (500 GB per month), Data transfer out to origin (100 GB per month), Number of requests (HTTPS) (10000000 per month), Data transfer out to internet (500 GB per month), Data transfer out to origin (100 GB per month), Number of requests (HTTPS) (10000000 per month), Data transfer out to internet (500 GB per month), Data transfer out to origin (100 GB per month), Number of requests (HTTPS) (10000000 per month), Data transfer out to internet (500 GB per month), Data transfer out to origin (100 GB per month), Number of requests (HTTPS) (10000000 per month), Data transfer out to internet (500 GB per month), Data transfer out to origin (100 GB per month), Number of requests (HTTPS) (10000000 per month), Data transfer out to internet (500 GB per month), Data transfer out to origin (100 GB per month), Number of requests (HTTPS) (10000000 per month), Data transfer out to internet (500 GB per month), Data transfer out to origin (100 GB per month), Number of requests (HTTPS) (10000000 per month), Data transfer out to internet (500 GB per month), Data transfer out to origin (100 GB per month), Number of requests (HTTPS) (10000000 per month), Data transfer out to internet (500 GB per month), Data transfer out to origin (100 GB per month), Number of requests (HTTPS) (10000000 per month), Data transfer out to internet (500 GB per month), Data transfer out to origin (100 GB per month), Number of requests (HTTPS) (10000000 per month)"
+
+
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
