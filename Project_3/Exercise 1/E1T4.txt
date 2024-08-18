@@ -1,0 +1,10 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+The WebAppSG and Web Service Instance are currently placed in a Public Subnet. 
+The WebAppSG does not limit inbound and outbound IP addresses, allowing requests from the internet to directly reach the Web Service Instance without going through the ALB, 
+leading to potential external attacks.
+
+# Poor practice 2
+The S3 buckets do not adhere to the principle of least privilege: do not place the S3 bucket within a specific VPC to restrict public IP access to S3, 
+do not configure bucket policies to limit resources and actions (read, write, list, ...) for the buckets.
